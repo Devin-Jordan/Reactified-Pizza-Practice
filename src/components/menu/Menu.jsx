@@ -1,4 +1,4 @@
-
+import Pizza from "../pizza/Pizza";
 const pizzaData = [
   {
     name: "Focaccia",
@@ -43,3 +43,13 @@ const pizzaData = [
     soldOut: false,
   },
 ];
+
+export default function Menu () {
+  return (
+  <main className="menu">
+    <ul className="pizzas">
+      {pizzaData.map(pizza => <Pizza pizza={pizza}/>)}
+    </ul>
+  </main>)
+  
+}
